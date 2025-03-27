@@ -5,11 +5,11 @@ from groq import Groq
 from dotenv import load_dotenv
 
 load_dotenv(dotenv_path = '.env')
-
+GROQ_API_KEY = "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"
 
 class GroqModel:
     def __init__(self, model : str ='gemma2-9b-it' ):
-        self.client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+        self.client = Groq(api_key=GROQ_API_KEY)#os.getenv("GROQ_API_KEY"))
         
         self.model = model  # Example: 'mixtral-8x7b'
 
